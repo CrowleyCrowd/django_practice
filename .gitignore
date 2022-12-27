@@ -1,0 +1,40 @@
+# Archivos de configuración local
+*.env
+*.ini
+*.json
+
+# Archivos generados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+migrations/
+
+# Archivos binarios
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+*.ico
+*.svg
+*.ttf
+*.woff
+*.woff2
+*.eot
+*.otf
+*.mp3
+*.mp4
+*.m4a
+*.webm
+*.ogv
+*.ogx
+*.oga
+*.ogm
+*.opus
+
+# Archivos de virtualenv
+venv/
+*.venv
+.DS_Store
