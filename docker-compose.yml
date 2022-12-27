@@ -20,6 +20,15 @@ services:
       - db
     environment:
       - DATABASE_URL=postgres://myuser:mypassword@db:5432/mydatabase
-
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@domain.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    ports:
+      - 5050:80
+    volumes:
+      - pgadmin:/srv/pgadmin
 volumes:
   pgdata:
+  pgadmin:
