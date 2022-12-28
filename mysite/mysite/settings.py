@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
 import os
 
 
@@ -78,7 +77,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'default': dj_database_url.parse(os.environ['DATABASE_URL'])
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['DATABASE_NAME'],
+        'USER':  os.environ['DATABASE_USER'],
+        'PASSWORD': os.environ['DATABASE_PASSWD'],
+        'HOST': os.environ['DATABASE_HOST'],
+        'PORT': '5432',
     }
 }
 

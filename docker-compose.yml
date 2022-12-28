@@ -19,7 +19,10 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://myuser:mypassword@db:5432/mydatabase
+      - DATABASE_NAME=mydatabase
+      - DATABASE_USER=myuser
+      - DATABASE_PASSWD=mypassword
+      - DATABASE_HOST=db
   pgadmin:
     image: dpage/pgadmin4
     environment:
